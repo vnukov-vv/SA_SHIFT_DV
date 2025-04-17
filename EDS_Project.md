@@ -61,6 +61,15 @@
 
 ## <a id="title3"> 3. Контекстная диаграмма </a>
 
+### "Классическая"
+
+![АДС_Контекстная_диаграмма](https://github.com/user-attachments/assets/43203029-4abc-4fcc-b8f4-87c400620a40)
+
+[см. в Google Draw](https://docs.google.com/drawings/d/1WK4C3f7dXRz46UVjHfCQ6sbBk8tnQkyMIweeT2CtFcc/edit?usp=sharing)
+
+
+
+
 
 ### Диаграмма
 <details><summary> Развернуть код </summary>
