@@ -140,11 +140,10 @@ Rel(sys, notify, "Использует", "https")
 
 Rel_L(user, sys, "Использует", "https")
 
-@enduml```
+@enduml
+```
 
 </details>
-
-
 
 
 ## <a id="title4"> 4. Пользовательские сценарии </a>
@@ -156,7 +155,51 @@ Rel_L(user, sys, "Использует", "https")
 |---|---|---|---|
 
 ### Диаграмма
+
+UseCase
+
+![](https://www.plantuml.com/plantuml/svg/VL9FIlj05DxFAHxP_20_AhJTbH8ANa043p1DnZOqJK9cYaWLObrqOQ4k2afLf3U8Ob6iQQ_mvaQ-cKK38cxQl7n_lkyzqf6APseqZ1Zx9mTXdFAC3o4AOw7EKm59fle9YyIf0fL05lRw2e8m4xuAavWnri8xBFGSN_53Jt2D6prh0PV0qvIm1RszmXskzKHFwJUtM20DTc-HBMwm_A7rarXbZ1rnVy1x0fmpqNN6f7Z4Py0bHHKw9y6Ef0Nz5_-jQfXqYVE0Iy1RV27ZaYnBWrjOXagmIyQe6DHg5vvf0TL4wcgoPA3jZcbF7lSYAj5kuyfiOvj-OM5I5hZoF0V6R2I5poMnwWT0j2s-uvlffcVWkliBVUfhrtLCcPF3UgLfaEO92zAKH9nIYD6PWSI_dcc-jsbKDasoeIHAoVNDNz5DSuP0cbKzqwHw9ZjxUpDP8cCT4GVqSNm3)
+
+
 <details><summary>Развернуть код </summary>
+
+```plantUML
+@startuml
+
+'skinparam linetype ortho
+left to right direction
+
+
+:Заявитель: as app
+:Диспетчер: as dsp
+:Исполнитель: as contr
+
+Package "web"{
+:МП Квартплата+: as mob
+:ЛК Абонента: as site
+}
+
+app --|> dsp 
+app --|> mob 
+app --|> site 
+
+
+Rectangle "<<Система АДС>>" {
+usecase "1. Создать **Заявку**" as UC1
+usecase "2. Назначить на **Исполнителя**" as UC2
+usecase "3. Закрыть **Заявку**" as UC3
+}
+
+dsp --> UC1
+dsp --> UC2
+contr --> UC3
+
+@enduml
+
+```
+
+
+
 </details>
 
 
