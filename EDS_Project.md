@@ -31,6 +31,10 @@
 [3. Бизнес-требования](#title3)</br>
 [4. Контекстная диаграмма](#title4)</br>
 [5. Пользовательские сценарии](#title5)</br>
+
+&nbsp; [1.1 Термины и определения](#title1_1) <br>
+&nbsp; [1.2 Ссылки на существующую документацию, НПА](#title1_2) <br>
+
 [6. Диаграмма последовательности](#title6)</br>
 
 &nbsp; [4.1 ...](#title4_1) <br>
@@ -187,6 +191,60 @@ Rel_L(user, sys, "Использует", "https")
 ### Диаграмма
 
 UseCase
+#### Личный кабинет
+
+```plantUML
+@startuml UseCase_LKADS
+left to right direction
+actor "Абонент\n(Владелец помещения)" as User
+
+package "ЛК АДС" {
+  usecase "Управлять помещениями"            as UC_ManagePrem
+  usecase "Добавить помещение"               as UC_AddPrem
+  usecase "Редактировать помещение"          as UC_EditPrem
+  usecase "Удалить помещение"                as UC_DelPrem
+  usecase "Просмотреть список помещений"     as UC_ViewPrem
+
+  usecase "Создать заявку"                   as UC_CreateReq
+  usecase "Автосохранить черновик"           as UC_SaveDraft
+  usecase "Восстановить черновик"            as UC_RestoreDraft
+  usecase "Прикрепить файлы"                 as UC_AttachFiles
+
+  usecase "Просмотреть список заявок"        as UC_ViewReq
+  usecase "Просмотреть детали заявки"        as UC_ViewReqDetails
+  usecase "Отменить заявку"                  as UC_CancelReq
+  usecase "Оплатить заявку"                  as UC_PayReq
+  usecase "Оставить отзыв"                   as UC_Feedback
+}
+
+' Управление помещениями как родительский UC
+UC_ManagePrem .u.> UC_AddPrem   : <<include>>
+UC_ManagePrem .u.> UC_EditPrem  : <<include>>
+UC_ManagePrem .u.> UC_DelPrem   : <<include>>
+UC_ManagePrem .u.> UC_ViewPrem  : <<include>>
+
+' Создание заявки
+User --> UC_ManagePrem
+User --> UC_CreateReq
+User --> UC_ViewReq
+User --> UC_ViewReqDetails
+User --> UC_CancelReq
+User --> UC_PayReq
+User --> UC_Feedback
+
+UC_CreateReq .d.> UC_AttachFiles     : <<include>>
+UC_CreateReq .d.> UC_SaveDraft       : <<include>>
+UC_CreateReq .d.> UC_RestoreDraft    : <<extend>>
+UC_CreateReq .d.> UC_AddPrem         : <<include>>  ' выбор помещения
+UC_CreateReq .d.> UC_ViewPrem        : <<include>>  ' выбор из списка
+
+' Оплата заявки только для платных
+UC_PayReq .> UC_CreateReq : <<extend>>
+@enduml
+
+```
+
+#### Прием и обработка Заявок
 
 ![](https://www.plantuml.com/plantuml/svg/VL9FIlj05DxFAHxP_20_AhJTbH8ANa043p1DnZOqJK9cYaWLObrqOQ4k2afLf3U8Ob6iQQ_mvaQ-cKK38cxQl7n_lkyzqf6APseqZ1Zx9mTXdFAC3o4AOw7EKm59fle9YyIf0fL05lRw2e8m4xuAavWnri8xBFGSN_53Jt2D6prh0PV0qvIm1RszmXskzKHFwJUtM20DTc-HBMwm_A7rarXbZ1rnVy1x0fmpqNN6f7Z4Py0bHHKw9y6Ef0Nz5_-jQfXqYVE0Iy1RV27ZaYnBWrjOXagmIyQe6DHg5vvf0TL4wcgoPA3jZcbF7lSYAj5kuyfiOvj-OM5I5hZoF0V6R2I5poMnwWT0j2s-uvlffcVWkliBVUfhrtLCcPF3UgLfaEO92zAKH9nIYD6PWSI_dcc-jsbKDasoeIHAoVNDNz5DSuP0cbKzqwHw9ZjxUpDP8cCT4GVqSNm3)
 
