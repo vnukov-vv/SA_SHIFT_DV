@@ -119,7 +119,7 @@
 
 ## <a id="title4"> 4. Архитектура Системы (HLD) </a>
 
-### В нотации С4 
+
 > **Заявитель** не отображается т.к. не взаимодействует с системой напрямую. Легенда выключена
 
 ![](https://www.plantuml.com/plantuml/svg/ZLPVRzDM57_tfxYh9YNDiW2YUvaGecghCQbYrQ12aof5NkDIYzI9ObUZRssw3L0OHHjYQ9lO-h1tDqrR9mtDLxZt6-rtVdOyXq2nH8Xpxxddz-USUznRVc2tWksjkcLzudhhzUsQeswiprrPcAikDBp0UHHKcjYz-TvTs_MSLhAlCX6DZGrttRcowZij_ygsdyPy8ABXrP6e-l70hSRtRdqYq5gU_-wRrNlLvVaxYtSNvbUMYhDM8Lcx__MzszNbfQ-MxYnYrIheaJxN5wQjt-B_FTCspnIMBfG-nkzT7UapVQ7VOZz4N6Jv3rslQRViBUKrQexlDDNrgvSawUeJiulrI0-c4hHixw4a-E8gQ03a670XCaJcCUAxU3xHGsMUO04ym65VcL-G0wluW1BET5KHtoTw8AXA7-7nJA21YaUoqU5i1lI7bjsyxzQ2JNLDS0Ctg3jA7m832PWwLFg5VgaFrppz1wMd-P4lD0TAzy0cJEWEUMBDAoxCLQvLakQ0svkENNDQQiL-uAZRVBOA6ur6W6-elIuSmpW1kBRbwKi5ZyxDS_Euh60w081-BXhn6IWTANoFX6ZiaZwf81D_9-Um1h_Q5JseA4ISm7ucmZAEzY2ZJnbTio-WokpX7n9GDoBwE8Nm4Ifse8Tctpot2Ylei8PNNNeK5ErciwnczEzY0ZBp782VpSZgtqG8cRTKqc_qaMWoJn4Y5JqebHG8eYoi49MVmTiEMB8r08nS7PZ-1dRiiSodupOWLsb1REsRlHdqRSohMFF9wILj6D5Aef3JFyXnB3iqE8Ai_SluwGlklIjGR2kLW9b0shKjIVu2SeVIbYb0A1q9w4jt0P3jDjC1CBg7_i5BtZPeJg2ZiiBEHAEOpYovf6LPHy-r1FCrBK0QeAR5MVDu-4Z4aTclfZEEWafQcmQOZfAzh0a3GQRy32H63H6dIQSDKKHMRiwkUH-Ae-EiLrjQmVoap8ySEaEfyDqTFt2sYlwEJqDvKEP0NwxrvxhtRibv3q1QIVUWqgVG58grlCspGefbJzLA-7jwGQfTLaWmOcYN7S3xDkMBZkXCp9JE-6xWb6TkV9ePtZSL7FYJKqtwlQzuzeZD0VBO91_v5SzPfLzXylnBmeUcdKx5dx5Lc3HYIczXaWvU3SA6RuWCcxy01mAi2So4Ceh50dwSZkMkUGNm89ffSyA7Gk-pGjn7a84LtQEDXOmnaP2miZIQzWx5yFvtfN0e_JYZwJ3VwsJISgn2QqHbgCEuGMH0OIKpgR5GLg8Qcqaz9kLxZS3Tc8A6LrsSx-7yC2rkFziVo9zQsuMgC_JgzFGwPqsdPzWaXmSk-_St23pCLlOLbEt6Hx9zXL7FdlheIq8SxAMk8DdJySkNKoEDwd7i7JDEzlH8fM_g9sFn5S1zwzJZ4O-PcXqdlBZnv4n66qbZHv9sqvQEbq7z_qno6ov9jHa4JN_Y01erHxmbyMI9uP0ZNi9ZAldZoKJ2Sx6fBlAra3z_TJMUstcFn9ePYuRAgO7Xl7lvmzChaqlsCby5-KNSShoQ_5Nz7m00)
@@ -195,6 +195,108 @@ Rel_L(user, sys, "Использует", "https")
 @enduml
 ```
 
+</details>
+
+> В сокращенном виде для иллюстрации взаимодействия модулей **Системы**
+
+
+![](https://www.plantuml.com/plantuml/svg/bLP_Jnj74FtVds9BAzcungGD_QT2KIYWfX9AIGcAAY5P1pw2XNrsV6SrgAe4fcqIaG3zeJIY5Isg-lzXR6mCiR_2x3VgUrfp77Q02sfZUtVcpPitixDxr_MiibSfv6En3tBEKhwIjTNuqjZev5XcikXuzbClNSBkdNVkMZd7BlVsLSYYkBoSMx97vrsxx8vMtC3c2ekYamTGvcR3Gd4nbxza69kP-FRh-OUPcOdxKtEJ4xFJYU5OlBVswAk7zp8pqrzEtv_2QYmkNJcLZgxAM_oxeQlwfS9IHyaHVgzBIvhIaRVOzs7NYhchEQTabQs2SefPsxLBwlQjQq1gqj3hM6z9Um2WR3ch1FZi5cbqv0ZXV22qz3FOr_2z8MTAFvSMUO33fjAlW85LQP0IV6egWS-6j1bLoI6-DX6QKMb3Dk8FXu9-LxPAZt9PRqLzmhXUpilRIWwaHG12YwzaLtwNWmL7zfXwWC_iVBsZf0uslg4BUteiE8d9iVIdwQ3yq7l5jh9sMSrQZsrrp-RtM7ovMFJmYNnlawLl8C2soc-VAwXqghVrivII9aCW_YcpnFzj9Is5powf6fsaaGOIVni_waR5gcbffnKi6Ym0WR0CrpeIEM4YKjER3Ahq1lu305EanObYZj95pNRaJ6_gxLXy5ZrMT3BJJxs4LIgbr93yGHcaPlmG-EKGL_zc13WJDvcKVJbaJle5J5ZJdMHIWQ0fJ5DnJvfGTmiisHmC3AmjoBwlgs35GX-RHkXnPHDYQrDl3B5p3R54rYKfL8mwT6bgmf2K_0EG8-vGOJOI4h-6e7JCNb-6r2sPHD3pc5QsGFHT97p6rWmY-EnAnhvkbn527QUt41aTH0Mf9aySi-x5RgKKTYwrYjuQfWAXoYoXySeC-eOY40TXW_eiEFIMGwP7Ql8hPEzP8KyASc6WjnJtmZAq6Pe2X4DotX1ha7NG4mczRZQ75vohxAYvgLYLtQ1_Klf7YYHdJ75kpVNiGkQBOiN9MkMrnFY7rk9IrbvEKLwYS3ASyA2FIBs_0tWkc85YDw7mnqZGXz3cV4D2zNqiFlRU1p6bJEMkEf8AVy4WIEHNATAVd6hCZqTiZrApCH3Fr8ChRPw_4NP8WCyzTEahHZeb0XCb6V8BOPYPXUhnfndM4Eyo3tVD9Te1XP4Q6PFwuKNT0TbIGScHvutC_XAVluaueZV2mCqGIZ-HKZddU0DKzeCcWCetHlvNkYGEvzDU_xBk0F1vz-Zj_g1JYudi8Xr_uTIXN7NMopJSGD9p3sRuqGCnBVYWObVin1DYx0TZhDuRVLIlRjgvLsDIPbz86oTRSRQPaXt3n-nZhnj4flO8zqCiw7YUC3VdsQcXyOz2Bu4xW0itKryZODE_t0TANaF9_qXJ3dGrk69_nbQyxmpr7vKu9rw83nuQf1DwRv0Esg131YPxV6-W6CJaYG5GmvoB1ISkUoOSU7MnwPFVnt4paAJD5QZO9h6mBcGHkyIZPAqDjhA1vFWYeBmn5xUvfP5jIpCtfJVFHmqxYza6OvWBASMyiGaMdDrz0ZX5BxSy41jorTWC03W31vFl2La4TqprGjqQycfYx0tUXUQ43zw8VIGUvrn2_uOK3yBLVOtSrerFQ7QpfpcvRtvpKCDwe0l0Nfo_vd05XQpgl4GvX2xQE7ZwFJ_F7W-JR-oywM354HYwcNW7c6kOl5Syh-I27yrf-2IYBUmuqg8Pqr9b5w-nvfatjcO-HR4EE1kNI5Goy-QkZkx4lpWypUiBhvrhV6JND82v9QGMZ0Yp3BGB9DRcvl0X1vpx2FR6WJHPdwW1IEQz7436s4SZb9dYcorgX72X8ll4WqRZ2OsQD-tDF8jkRyPGr3nc-5ABdiPTsybM2ld_0G00)
+
+
+<details><summary> Развернуть код </summary>
+  
+```plantUML
+
+@startuml
+
+!include <c4/C4_Context.puml>
+!include <c4/C4_Container.puml>
+ 
+!include <office/Users/user.puml>
+!include <office/Users/online_user.puml>
+!include <office/Users/mobile_user.puml>
+
+LAYOUT_LANDSCAPE()
+'LAYOUT_WITH_LEGEND()
+
+'плотность по горизонтали
+skinparam nodesep 30
+'плотность по вертикали
+skinparam ranksep 50
+
+'ограничиваем ширину элементов (текст без переноса)
+skinparam wrapWidth 150
+
+title Система АДС\nКонтекстная диаграмма \n(C4.2.Container)
+'header Page Header
+'footer
+
+
+'3 параметра: ключ, заголовок и описание.
+
+'исключим т.к. не взаимодействует с ситемой напрямую
+'Person_Ext(app, "Заявитель", "Подает **Обращения** через разные каналы\nОтслеживает статус")
+
+'Person(dsp, "Диспетчер", "Регистрирует **Обращения** от **Заявителей**")
+'Person(adm, "Администратор", "Администратор **Системы** \n(Пользователи, Параметры)")
+
+Person_Ext(contr, "Исполнитель\nработ", "Выполняет работы по **Заявкам**")
+Person_Ext(user, "Пользователь", "(роль)\nПользователь отчетных форм")
+
+System_Boundary(<#abcdef,"Аварийно-диспетчерская служба\n(АДС)") {
+'4 параметра: ключ, заголовок, стек и описание.
+    Container(lk, "Личный Кабинет", "Какой-то стек", "бэк личного кабинета Абонента")
+    Container(sys, "Сервис обработки Заявок", "Какой-то стек", "Мастер-сервис заявок")
+    Container(print, "Сервис Отчетов", "Какой-то стек", "Управляет печатью")
+    ContainerDb(db, "База данных Заявок", "SQL", "")
+    SystemQueue(q, "Очередь", "отдельный топик \n на каждый тип Заявки")
+}
+
+
+System_Ext(site,"<$online_user> \nЛичный кабинет\nабонента ЖКХ", "Страница 'Аварийная служба'")
+'System_Ext(mob,"<$mobile_user> \nМобильное приложение\n'Квартплата+'", "Вкладка 'Заявки'")
+
+
+'System_Ext(pay, "Сервис оплаты", "Интеграция с учетной системой, банками")
+'System_Ext(notify, "Сервис уведомлений", "Обратная связь через различные каналы")
+'System_Ext(gis, "ГИС ЖКХ", "Журнал **Заявок**")
+
+
+'3 параметра: ключ одной сущности, ключ другой тип отношений.
+
+Rel(site, lk, "Использует", "https")
+Rel(lk, q, "Использует", "https")
+Rel(q, sys, "Использует", "https")
+Rel(sys, db, "Использует", "SQL")
+Rel(print, db, "Использует", "SQL")
+
+Rel(lk, print, "Использует", "https")
+Rel_U(contr, print, "Использует", "https")
+
+
+
+
+'Rel(app, dsp, "Использует", "Аналоговый канал")
+'Rel(app, site, "Использует", "https")
+'Rel(app, mob, "Использует", "https")
+
+'Rel(dsp, sys, "Использует", "https")
+'Rel(site, sys, "Использует", "https")
+'Rel(mob, sys,"Использует", "https")
+
+'Rel_D(adm, sys, "Использует", "https")
+
+Rel_U(contr, sys, "Использует", "https")
+
+'Rel(sys, gis, "Использует", "https")
+'Rel(sys, pay, "Использует", "https")
+'Rel(sys, notify, "Использует", "https")
+
+Rel_L(user, sys, "Использует", "https")
+
+@enduml
+```
+  
 </details>
 
 
