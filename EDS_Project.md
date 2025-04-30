@@ -35,9 +35,7 @@
 &nbsp; [5.1 Модуль "Личный Кабинет"](#title5_1) <br>
 &nbsp; [5.2 Модуль "Прием и обработка Заявок"](#title5_2) <br>
 &nbsp; [5.3 Модуль "Отчеты"](#title5_3) <br>
-
-[6. Диаграмма последовательности](#title6)</br>
-
+[6. Пользовательские сценарии. Описание и Sequence диаграммы](#title6)</br>
 &nbsp; [4.1 ...](#title4_1) <br>
 &nbsp; [4.2 ...](#title4_2) <br>
 <br>
@@ -48,7 +46,7 @@
 |---|---|
 |**Абонент** |*Собственник или пользователь помещения в МКД обслуживаемом **АДС***| 	
 |**Аварийно-диспетчерская служба (АДС)**	|*Организация,  осуществляещая текущий контроль за работой внутридомовых инженерных систем многоквартирных домов (МКД), качества коммунальных ресурсов, а такще осуществляющую круглосуточную регистрацию и контроль выполнения **Заявок** собственников и пользователей помещений* |
-|**Администратор**|*Роль. Сотрудник **АДС** выполняющий функции по регистрации **Заявок** и/или изменении их атрибутов и/или статусов*|
+|**Администратор**|*Роль. Сотрудник **АДС** выполняющий функции изменения параметров **Системы** и управления ролями пользователей **Системы***|
 |**Диспетчер**	|*Роль. Сотрудник **АДС** выполняющий функции по регистрации **Заявок** и/или изменении их атрибутов и/или статусов*|
 |**Заявка**	|*Обращение собственника или пользователя помещения в МКД связанным с предоставлением коммунальных и других услуг, выполнением работ по содержанию и ремонту общего имущества или устранением неисправностей и повреждений внутридомовых инженерных систем*|
 |**Заявитель** |***Абонент** или иное физическое лицо или организация обратившееся в **АДС***| 
@@ -268,12 +266,14 @@ UC_PayReq .> UC_CreateReq : <<extend>>
 
 ### <a id="title5_2"> 5.2 Модуль "Прием и обработка Заявок" </a>
 
-![](https://www.plantuml.com/plantuml/svg/VL9FIlj05DxFAHxP_20_AhJTbH8ANa043p1DnZOqJK9cYaWLObrqOQ4k2afLf3U8Ob6iQQ_mvaQ-cKK38cxQl7n_lkyzqf6APseqZ1Zx9mTXdFAC3o4AOw7EKm59fle9YyIf0fL05lRw2e8m4xuAavWnri8xBFGSN_53Jt2D6prh0PV0qvIm1RszmXskzKHFwJUtM20DTc-HBMwm_A7rarXbZ1rnVy1x0fmpqNN6f7Z4Py0bHHKw9y6Ef0Nz5_-jQfXqYVE0Iy1RV27ZaYnBWrjOXagmIyQe6DHg5vvf0TL4wcgoPA3jZcbF7lSYAj5kuyfiOvj-OM5I5hZoF0V6R2I5poMnwWT0j2s-uvlffcVWkliBVUfhrtLCcPF3UgLfaEO92zAKH9nIYD6PWSI_dcc-jsbKDasoeIHAoVNDNz5DSuP0cbKzqwHw9ZjxUpDP8cCT4GVqSNm3)
+![Управление заявками](https://www.plantuml.com/plantuml/svg/VPFVQXD15CRlprCSzaQ8f92qlGbXAVW28lW0qzqnNRhP3RiJLAeGAzYB5YfIKEeVARx0AWQ3RP9NEFD6VcU538Za9fapt_cTxvkPvA1sfdBJSKxaCfTR7d0atsJjPzB83xcLkInb8NEMzzBuIspzXd0dYuZeNdsS5HDJcJ7dMM7Tyudbid979UNsYMDNSfMDZXodMMKJbvK5qM0pPk5FCVlMNmpOr6mc4sXNs7qbQvdxKt-6prchfRLg7rfbXKJBVzYaB5n5zD0ansPaENfg3wCJ49_aAyirh1e_0x06sk2xkTzIu_8GFH_bckMjVCVWfHvLzLQkCsVf9H62SRVx8jOK72hGeMgRcOWUuPYc6EK8CHpAZPwcJNedZRfSoKqSHtn2qzecfaPNRuVHjf9VybEp-GlkTC95-zUTJgHX7Z_e1QOFvhCqO9PeF8E9Sbe0_kyrNMx6zCEONOpvuj_yVTzjrhk1sGFppfy7WstSNk3smQ45yioVRsFszSe9ENadLciUy71edpbRf75Cc8bzRMltioB9fwc5G6cjBw5IZ_0qcxK-pAQWqDKFQtXI-mlYxbHhvAO3-EbVuWy0)
 
 <details><summary>Развернуть код </summary>
 
 ```plantUML
 @startuml
+
+title : "Управление Заявками"
 
 'skinparam linetype ortho
 left to right direction
@@ -295,14 +295,26 @@ app --|> site
 Rectangle "<<Система АДС>>" {
 usecase "1. Создать **Заявку**" as UC1
 usecase "2. Назначить на **Исполнителя**" as UC2
-usecase "3. Закрыть **Заявку**" as UC3
+usecase "3. Оценить **Заявку**" as UC3
+usecase "4. Выполнить **Заявку**" as UC4
+usecase "5. Закрыть **Заявку**" as UC5
 }
 
+
+UC2 .> UC3 : <<extend>>
+UC4 .> UC5 : <<include>>
+
 dsp --> UC1
+mob --> UC1
+site --> UC1
+
 dsp --> UC2
-contr --> UC3
+dsp --> UC5
+
+contr -u-> UC4
 
 @enduml
+
 
 ```
 </details>
@@ -377,7 +389,130 @@ UC_ReceiveTask .> UC_CreateTask : «порождено»
 
 
 
-## <a id="title6"> 6. Диаграмма последовательности </a>
+## <a id="title6"> 6. Пользовательские сценарии. Описание и Sequence диаграммы </a>
+
+## личный кабинет
+
+![SVG](https://www.plantuml.com/plantuml/svg/bLRDRXfN5DxVfxXYXINYjkgkagjKxQxTLTbrOwKiBBbWcMdNW6kQAfP8h4XPL8s3yW83WJ0mCFCAvxv2dwJVTu-kVCS38juWvjxpSxxlVEVCFEqbfvV9xx-TMsEIi-IyRR-npxv_yjMnbVUoa8-IkO4RkhwaReJ_OojB_1tBJDQIMJUmKaeX6rculs6-bGo_6ykh4PznjpBcz7dIlRGDUILJ76nvuOQsARUIIofpFES8CAh5SkEZXZtjsMUzzgMvG9rdpyykJZi9Gls3sxyGvgMiB4f94JbZP3Vq7Z_z-C1-ea1OdQGMbRoHYRVyxeUVZJaviV8MGKftvGQojkvFAO1vurvMyPwS6CDYx9DlaG9KoR_m-WIB8P7R1fuBsAPLejA6_MzqImByNH-sAnHBAwJBtHL2J645fiuJZRdoj6nvNxXhyW-mh-6aa85zWSCjio7QsbXhMH7gOdsix0xt2qJ9OVCfz0Rd9SuBd1UIupn3Ss-icYB7ca1em4BLnU8d1tOMZBGf7JmuqUo5prrbvHP5JaaXCDyzCb_3jCzxRR30PjQ0IXhgaHcJA3CaVazrZLtKu8gQMLhjk1jIf_kwRjgTNocH65PTgIXBkQKkCxQfffQ30MJ9VfUKAklRxrpD8uNo4CLgSZ9JcH4PKsb8fZmoHidGeAzemtFLiATRBHUMhjefdT2WXpLjkHnO38uoObSMyRJ1AVzdLHAh7NX7OwtwNfoxOZHzFNarMahwSbQXKtGKJJ1rXjCGai8BXnGVaRWRqkQkUKcTwCEERicCohLAd6nqR-a0kx4ntOj4nmowz3oL4KiG4wSufmfh4wArVdHzZFwIW5Hx0Fy5PKx2-JV5zHoFEc9-DxodRBrm-lSfKgkDuaYu5pZav4XE8edPUt_cWh18gK1l44cdDUG9axTpXK2Q2mxKh19lfRbhyE_e3xmp0e7rFEJtzXouC7H1eV4Y3CQxjWFRU7nyh6l7ZIWVpW9yl88qetl1NGgpU1OUcwdvzPTGB2pMFdpOPhZV1ld6kyfT4xDArUk_P0hLyoFVCh6xqXzU7UymKsC6YvKE5nq1Dmv4n9D2aprBSWvy96oeHHQKX7-7hriQ14Mes8eAe4ntEEfK1tep56lJpmPz0zVJyarDeebBsoPpPHF2B5biIy6e1gSuNH6h7Yufl7ZZAtsJUaEhZCkitk3CXr4TQZ1yAYWn2vqSVUDK8pNtV1ArAakRhvjMz8bqn5oC7wKv_FaLOlec5VV8jfgUNd7S0vCNWhs6h_eTNjdLP5KcLFPzWbTh5OdAATq1-0FlK0_ZvV429y2IRjeZIMiD_i1cq6dlj9fEDsdRxX_0Ga0jv3JoDfGRQk_7d5S-J59gH4NxIqScX419kW4bg--0hHkJ8Xe6eZWh71vtrK2ptZn4mcKROUPEejuiQpNcAVxYmzpy3m00)
+
+
+<details><summary>Развернуть код </summary>
+
+@startuml 
+
+title : UC-1. Регистрация заявки с помещением и ценой
+
+actor "Абонент (Владелец помещения)" as User
+participant "Личный кабинет" as LK
+participant "Система АДС" as ADS
+
+== Запуск формы заявки ==
+
+User -> LK : Нажатие "Новая заявка" → "Аварийная служба"
+
+alt Найден сохранённый черновик
+    LK -> User : Предложение: продолжить редактирование или начать заново
+    User -> LK : Выбор "Продолжить редактирование"
+else Нет черновика или выбран "Начать заново"
+    LK -> User : Показ пустой формы заявки
+end
+
+== Выбор помещения и причины ==
+
+User -> LK : Выбор помещения из списка
+User -> LK : Выбор причины обращения (с автопоиском)
+
+LK -> LK : Автоматическое определение категории и стоимости заявки
+LK -> User : Отображение стоимости (если заявка платная)
+
+== Заполнение дополнительных данных ==
+
+User -> LK : Ввод комментария
+
+opt Прикрепление файлов
+    User -> LK : Загрузка фото/видео/аудио
+    alt Размер файла превышает лимит
+        LK -> User : Предложение уменьшить файл или продолжить без вложений
+        User -> LK : Подтверждение
+    end
+end
+
+== Автосохранение черновика ==
+
+...Процесс не завершён...
+LK -> LK : Автосохранение черновика (30 сек неактивности или выход)
+
+== Отправка заявки ==
+
+User -> LK : Нажатие "Отправить"
+
+alt Обязательные поля не заполнены
+    LK -> User : Подсветка ошибок, запрет отправки
+else Ошибка связи с АДС
+    LK -> User : "Сервис недоступен, попробуйте позже"
+    LK -> LK : Сохранение заявки в черновики
+    
+end
+
+LK -> ADS : Передача заявки (с помещением, причиной, ценой)
+    ADS -> ADS : Регистрация заявки, присвоение номера
+    ADS -> LK : Подтверждение приёма
+    LK -> User : Отображение номера заявки и времени ответа
+    ADS -> ADS : Уведомление диспетчера
+    LK -> LK : Удаление черновика
+note over User,ADS
+Заявка зарегистрирована в АДС\nСтатус: "Принято в обработку", Диспетчер уведомлён
+end note
+
+@enduml
+</details>
+
+
+## формирование отчета по заявкам
+
+![SVG](https://www.plantuml.com/plantuml/svg/hLJDRjD04BxlKwno0eaSkUI0AiGH3i0JBFKUB9acYhUSSLFQGv6gIeXS43yg3s1ALt4Jntc5cLVWIVZ6DlAsTGwHE2IAlVFzp7opsKkTcRh3jubIBdQ9rICze9zKyNiggS1tHLUKqveAyXglZ_YKB_Y8SaqRgZGjAETpb2nHLDQF6a3F6P_poK0fi-_6KqtVUOOISE5pJGK8FAtuevf0FDwF9-R0GVUBdA8I9w4MO0DjKltAJiPJzs8S7IPMHSQPDoQrW5rGtWXVrqxNVCOVQi2pfqfjazR39o6XD4vpu3VICsSQH7bWucvhqbZypZXxsvKoYTFqjKF9a4GUT4imUyYlyLJo37QR7xjvl9I1y2bOV9FAg1LfsVIVuy-FLOW22oO1xEkNpuUqw7eSXV4LTplie-swbj7Q9BNtcxtY3DRA5YbhyJ_SGEqWQiSx3yiG4zr0oqlk2ip3dg5z-hSOv3kLYfRgdhMjKO3b1n_tN0nXlGatvG4mEVsY5SfE-EoHfjyepm4knFB3TcxppePqWStOvluRppYJsA439a-Bvew83b2H3LFPgQDBlFHjKAjkeS8HjK5io4Ew48hQxQt1KrMd0oVzjs8Ff_YB-Gi0)
+
+<details><summary>Развернуть код </summary>
+
+```plantUML
+@startuml
+title : "Формирование отчёта по заявкам за месяц"
+
+actor Руководитель
+participant "Модуль отчётов" as ReportModule
+database "База данных" as DB
+
+Руководитель -> ReportModule : Запрос на отчёт за месяц
+activate ReportModule
+
+alt Отчёт по конкретному дому
+
+Руководитель -> ReportModule : Уточнение: по дому №5
+ReportModule -> DB : SQL-запрос: заявки за месяц по дому №5
+
+activate DB
+
+else Отчёт по всем домам
+ReportModule -> DB : SQL-запрос: заявки за месяц
+
+end
+
+alt Заявки найдены
+DB --> ReportModule : Данные заявок
+
+ReportModule -> Руководитель : Сформированный отчёт (таблицы, графики)
+else Заявок нет
+DB --> ReportModule : Пустой результат
+deactivate DB
+
+ReportModule -> Руководитель : Уведомление: заявок за период не найдено
+end
+
+deactivate ReportModule
+@enduml
+```
+</details>
+
 
 
 
