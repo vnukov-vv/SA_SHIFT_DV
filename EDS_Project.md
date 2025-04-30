@@ -353,10 +353,9 @@ Rel_L(user, sys, "Использует", "https")
 
 </details>
 
-> В сокращенном виде для иллюстрации взаимодействия модулей **Системы**
+> В сокращенном виде для иллюстрации взаимодействия модулей (сервисов) **Системы**
 
-
-![](https://www.plantuml.com/plantuml/svg/bLP_Jnj74FtVds9BAzcungGD_QT2KIYWfX9AIGcAAY5P1pw2XNrsV6SrgAe4fcqIaG3zeJIY5Isg-lzXR6mCiR_2x3VgUrfp77Q02sfZUtVcpPitixDxr_MiibSfv6En3tBEKhwIjTNuqjZev5XcikXuzbClNSBkdNVkMZd7BlVsLSYYkBoSMx97vrsxx8vMtC3c2ekYamTGvcR3Gd4nbxza69kP-FRh-OUPcOdxKtEJ4xFJYU5OlBVswAk7zp8pqrzEtv_2QYmkNJcLZgxAM_oxeQlwfS9IHyaHVgzBIvhIaRVOzs7NYhchEQTabQs2SefPsxLBwlQjQq1gqj3hM6z9Um2WR3ch1FZi5cbqv0ZXV22qz3FOr_2z8MTAFvSMUO33fjAlW85LQP0IV6egWS-6j1bLoI6-DX6QKMb3Dk8FXu9-LxPAZt9PRqLzmhXUpilRIWwaHG12YwzaLtwNWmL7zfXwWC_iVBsZf0uslg4BUteiE8d9iVIdwQ3yq7l5jh9sMSrQZsrrp-RtM7ovMFJmYNnlawLl8C2soc-VAwXqghVrivII9aCW_YcpnFzj9Is5powf6fsaaGOIVni_waR5gcbffnKi6Ym0WR0CrpeIEM4YKjER3Ahq1lu305EanObYZj95pNRaJ6_gxLXy5ZrMT3BJJxs4LIgbr93yGHcaPlmG-EKGL_zc13WJDvcKVJbaJle5J5ZJdMHIWQ0fJ5DnJvfGTmiisHmC3AmjoBwlgs35GX-RHkXnPHDYQrDl3B5p3R54rYKfL8mwT6bgmf2K_0EG8-vGOJOI4h-6e7JCNb-6r2sPHD3pc5QsGFHT97p6rWmY-EnAnhvkbn527QUt41aTH0Mf9aySi-x5RgKKTYwrYjuQfWAXoYoXySeC-eOY40TXW_eiEFIMGwP7Ql8hPEzP8KyASc6WjnJtmZAq6Pe2X4DotX1ha7NG4mczRZQ75vohxAYvgLYLtQ1_Klf7YYHdJ75kpVNiGkQBOiN9MkMrnFY7rk9IrbvEKLwYS3ASyA2FIBs_0tWkc85YDw7mnqZGXz3cV4D2zNqiFlRU1p6bJEMkEf8AVy4WIEHNATAVd6hCZqTiZrApCH3Fr8ChRPw_4NP8WCyzTEahHZeb0XCb6V8BOPYPXUhnfndM4Eyo3tVD9Te1XP4Q6PFwuKNT0TbIGScHvutC_XAVluaueZV2mCqGIZ-HKZddU0DKzeCcWCetHlvNkYGEvzDU_xBk0F1vz-Zj_g1JYudi8Xr_uTIXN7NMopJSGD9p3sRuqGCnBVYWObVin1DYx0TZhDuRVLIlRjgvLsDIPbz86oTRSRQPaXt3n-nZhnj4flO8zqCiw7YUC3VdsQcXyOz2Bu4xW0itKryZODE_t0TANaF9_qXJ3dGrk69_nbQyxmpr7vKu9rw83nuQf1DwRv0Esg131YPxV6-W6CJaYG5GmvoB1ISkUoOSU7MnwPFVnt4paAJD5QZO9h6mBcGHkyIZPAqDjhA1vFWYeBmn5xUvfP5jIpCtfJVFHmqxYza6OvWBASMyiGaMdDrz0ZX5BxSy41jorTWC03W31vFl2La4TqprGjqQycfYx0tUXUQ43zw8VIGUvrn2_uOK3yBLVOtSrerFQ7QpfpcvRtvpKCDwe0l0Nfo_vd05XQpgl4GvX2xQE7ZwFJ_F7W-JR-oywM354HYwcNW7c6kOl5Syh-I27yrf-2IYBUmuqg8Pqr9b5w-nvfatjcO-HR4EE1kNI5Goy-QkZkx4lpWypUiBhvrhV6JND82v9QGMZ0Yp3BGB9DRcvl0X1vpx2FR6WJHPdwW1IEQz7436s4SZb9dYcorgX72X8ll4WqRZ2OsQD-tDF8jkRyPGr3nc-5ABdiPTsybM2ld_0G00)
+![Архитектура](https://www.plantuml.com/plantuml/svg/bLRjJXj75Fs_Jp5rAzcc1jA6_gbG50gegOHIKeAYIaZMWfUmmgmTxreDgYevq9PKf4a_gZIY4HMg-dyXE3OsWLUuyqOzHsDFjql1JYIokpDtpZdtuzwnSpECt5fKtoWxpZj-i5AkbpmrkJ8nFZrHdAu4aVSm6gjYzyR_xhf-uDLw-ofXKLbTzLUyySNGguNZzT3QN69H2Se0AWustAWi--N_63fpKrz-ldYtE3TrUsPXUcf-DfTtihsrUv_TlLMSc_rqzlOCLfsid4jNplIMlC7_Z_IMVgAmTARa5RuRqfQMdCaRxCUmQplXkXzKtPgxeO9AoGkzghf-xGgG8sdg1jRRqha0K7E3TG9yT0qoGF8AT34Gsde7zaTuRygfqe-n01tGiAtqZy30AluW2MUEL0xFfdJ8gkGGhorIWvKsL2DnFa7wLSsjtlDBqPhwWBoH7vKz9GVW080GEbRoa_mc1qk1xD5rYq_lOlrCoJ7Kn4Okx7bYASXDJunzE6RJZtYlUMx9gwbvzxwdRdbyTxAhbKg49_ozJfMnWO3QBRvzh12bhdwgTmfAMgG0VvTUug-ZfAtmFATK4oTfZZdEF4gW4XHd7qQv5R3N2YeZBs1nphEqedwWFbaAo267p5E6Lh_etRwLVaODwby3lMiIE38YlzDfIEXGwiX89f-aPD4Hwq_WW8F5miprEScJqmspcLyABhDJGiuTYe2ONVsTqjyAo-yKTCx2PXXv6yLFAlMWvDOsSvFlkiih9M-ra46cYCBoE66sHvaREWyaWzV0LuSUABnqzRQyXeCnycMIdC_arTTETkAjir5Gfc0koul2FriDkV8wW_G7Ivl-oOcIFOQQPGq-am-kT81qCihIjlZSaqDKFfYw1W5640DzIGnJkCWUFqt7Pl8f7U5cIBG31WP-G36a0zpc7P1jPLCEFmSgUmbRVWDnL3zA0hSIA6aXrPeVH1UaxDiYG9G7ClybvnIEmzrU_JBl08WvWFJJDEdCSgwqp8C_IqnnR6JconHSskc5EtDyf47krBswbtj0c7rJOD1pR2gT0PHZKz6zD5CrIqCwc16A0yHaxJNEc7tidLjoXX-Cts10c45gtUCe91Yn6P6hoyds37iqz2Ela9byBt6Xt82QvFbKAM4pJbOILJy7nT_qKWxqbftKtsChc-h2TBDbsSFPX21SMDHZxwsUdfSWX0GJFRmtaK-2ikc0r3IjjHHaPS_mGHZldPW2ty-QcIOThY0B7IfBnfKoaYggxkR5NkW3wbt2oGip_isiXxDjk0OxlTsVLInDh2Ik3omK5Dt69ZHWfPqY3YgHlvhc1YPUK4e0E8K6u-q9LSY-wL0GsE0UmQiMvgOjmPOPtYtfsgmsJLPn1Y7TJOcuxuU4_XKk7YIJ-no-DSoPvF17Kt3q3xwv6CDZ6nU0_O0FKyhjGiBgM3VWCKUgRGBx0-9nttjSRrzuPLF02ZCqURNn4W52RtYkHL4rX3wQq_31aBQmmqmSqfYMghHyXJM6Xh4jBfeHDvIzLMsE31PZ6CnzF_ofvA4XlNQorcyKpE032NlJNiFRcwuOqddpksFuUDtqWX9-6Vy3)
 
 
 <details><summary> Развернуть код </summary>
@@ -390,12 +389,6 @@ title Система АДС\nКонтекстная диаграмма \n(C4.2.C
 
 '3 параметра: ключ, заголовок и описание.
 
-'исключим т.к. не взаимодействует с ситемой напрямую
-'Person_Ext(app, "Заявитель", "Подает **Обращения** через разные каналы\nОтслеживает статус")
-
-'Person(dsp, "Диспетчер", "Регистрирует **Обращения** от **Заявителей**")
-'Person(adm, "Администратор", "Администратор **Системы** \n(Пользователи, Параметры)")
-
 Person_Ext(contr, "Исполнитель\nработ", "Выполняет работы по **Заявкам**")
 Person_Ext(user, "Пользователь", "(роль)\nПользователь отчетных форм")
 
@@ -405,14 +398,14 @@ System_Boundary(<#abcdef,"Аварийно-диспетчерская служб
     Container(sys, "Сервис обработки Заявок", "Какой-то стек", "Мастер-сервис заявок")
     Container(print, "Сервис Отчетов", "Какой-то стек", "Управляет печатью")
     ContainerDb(db, "База данных Заявок", "SQL", "")
-    SystemQueue(q, "Очередь", "отдельный топик \n на каждый тип Заявки")
+    ContainerQueue(q, "Очередь", "отдельный топик \n на каждый тип Заявки")
 }
 
+'оставляем только "Личный Кабинет"
 
 System_Ext(site,"<$online_user> \nЛичный кабинет\nабонента ЖКХ", "Страница 'Аварийная служба'")
+
 'System_Ext(mob,"<$mobile_user> \nМобильное приложение\n'Квартплата+'", "Вкладка 'Заявки'")
-
-
 'System_Ext(pay, "Сервис оплаты", "Интеграция с учетной системой, банками")
 'System_Ext(notify, "Сервис уведомлений", "Обратная связь через различные каналы")
 'System_Ext(gis, "ГИС ЖКХ", "Журнал **Заявок**")
@@ -424,31 +417,18 @@ Rel(site, lk, "Использует", "https")
 Rel(lk, q, "Использует", "https")
 Rel(q, sys, "Использует", "https")
 Rel(sys, db, "Использует", "SQL")
-Rel(print, db, "Использует", "SQL")
+Rel_U(print, db, "Использует", "SQL")
 
 Rel(lk, print, "Использует", "https")
+
 Rel_U(contr, print, "Использует", "https")
-
-
-
-
-'Rel(app, dsp, "Использует", "Аналоговый канал")
-'Rel(app, site, "Использует", "https")
-'Rel(app, mob, "Использует", "https")
-
-'Rel(dsp, sys, "Использует", "https")
-'Rel(site, sys, "Использует", "https")
-'Rel(mob, sys,"Использует", "https")
-
-'Rel_D(adm, sys, "Использует", "https")
-
 Rel_U(contr, sys, "Использует", "https")
 
 'Rel(sys, gis, "Использует", "https")
 'Rel(sys, pay, "Использует", "https")
 'Rel(sys, notify, "Использует", "https")
 
-Rel_L(user, sys, "Использует", "https")
+Rel(user, print, "Использует", "https")
 
 @enduml
 ```
